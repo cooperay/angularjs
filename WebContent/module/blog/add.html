@@ -1,0 +1,146 @@
+<div class="panel panel-default">
+
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-md-11 col-md-offset-1">
+				<h3>增加用户</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<form name="myForm" class="form-horizontal" role="form" novalidate>
+					<div class="form-group"
+						ng-class="{'has-error' : myForm.code.$invalid}">
+						<label class="col-md-2 control-label">代码:</label>
+						<div class="col-md-10">
+							<input type="text" name="code" class="form-control"
+								ng-model="entry.code" placeholder="必须输入" required />
+							<p style="color: red"
+								ng-show="myForm.code.$dirty && myForm.code.$invalid">
+								<span ng-show="myForm.code.$error.required">代码不能为空。</span>
+							</p>
+						</div>
+					</div>
+
+					<div class="form-group"
+						ng-class="{'has-error' : myForm.code.$invalid}">
+						<label class="col-md-2 control-label">名称:</label>
+						<div class="col-md-10">
+							<input type="text" name="cname" class="form-control"
+								ng-model="entry.cname" placeholder="必须输入" required />
+							<p style="color: red"
+								ng-show="myForm.cname.$dirty && myForm.cname.$invalid">
+								<span ng-show="myForm.cname.$error.required">名称不能为空。</span>
+							</p>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-2 control-label">邮箱:</label>
+						<div class="col-md-10">
+							<input type="email" name="email" class="form-control"
+								ng-model="entry.email" placeholder="输入正确的邮箱地址" required />
+							<p style="color: red"
+								ng-show="myForm.email.$dirty && myForm.email.$invalid">
+								<span ng-show="myForm.email.$error.required">邮箱是必须的。</span> <span
+									ng-show="myForm.email.$error.email">非法的邮箱地址。</span>
+							</p>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-2 control-label">手机:</label>
+						<div class="col-md-10">
+							<input type="tel" class="form-control" ng-model="entry.mobile" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-2 control-label">固定电话:</label>
+						<div class="col-md-10">
+							<input type="tel" class="form-control" ng-model="entry.tel" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-2 control-label">QQ:</label>
+						<div class="col-md-10">
+							<input type="tel" class="form-control" ng-model="entry.qq" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-2 control-label">部门:</label>
+						<div class="col-md-4">
+							<input type="tel" class="form-control"
+								ng-model="entry.iddepartment" placeholder="请选择" readonly />
+						</div>
+						<div class="col-md-4">
+							<input type="tel" class="form-control"
+								ng-model="entry.namedepartment" placeholder="请选择" readonly />
+						</div>
+						<div class="col-md-2">
+							<a class="btn btn-default" ng-click="openChooseDepModal()">选择部门</a>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-2 control-label">所属商城:</label>
+						<div class="col-md-10">
+							<input type="tel" class="form-control" ng-model="entry.idshop" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-2 control-label">是否管理员:</label>
+						<div class="col-md-10">
+							<label class="radio-inline"> <input type="radio"
+								ng-model="entry.isadmin" value="1" checked> 是
+							</label> <label class="radio-inline"> <input type="radio"
+								ng-model="entry.isadmin" value="0"> 否
+							</label>
+						</div>
+					</div>
+
+
+
+					<div class="form-group">
+						<label class="col-md-2 control-label">备注:</label>
+						<div class="col-md-10">
+							<input type="tel" class="form-control" ng-model="entry.remark" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-2 control-label">登录时间:</label>
+						<div class="col-md-10">
+							<input type="tel" class="form-control"
+								ng-model="entry.timestrweek" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-2 control-label">登录时间限制:</label>
+						<div class="col-md-10">
+							<input type="tel" class="form-control"
+								ng-model="entry.timestrtime" />
+						</div>
+					</div>
+
+
+					<div class="form-group">
+						<label class="col-md-2 control-label">是否启用:</label>
+						<div class="col-md-10">
+							<label class="radio-inline"> <input type="radio"
+								ng-model="entry.isstart" value="1" checked> 是
+							</label> <label class="radio-inline"> <input type="radio"
+								ng-model="entry.isstart" value="0"> 否
+							</label>
+						</div>
+					</div>
+
+					<button ng-click="doAdd()" ng-disabled="myForm.$invalid"
+						type="submit" class="btn btn-primary col-md-offset-2">保存</button>
+					<button ng-click="goBack()" class="btn btn-default">取消</button>
+				</form>
+			</div>
+		</div>
+
+	</div>
+</div>
+

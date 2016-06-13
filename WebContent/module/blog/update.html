@@ -1,0 +1,125 @@
+<div class="panel panel-default">
+	
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-md-11 col-md-offset-1">
+				<h3>修改用户</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<form name="myForm" class="form-horizontal" role="form">
+				<div class="form-group">
+						<label class="col-md-2 control-label">代码:</label>
+						<div class="col-md-10">
+							<input type="text" class="form-control" ng-model="entry.code" placeholder="必须输入"/>	
+						</div>
+					</div>
+				
+					<div class="form-group">
+						<label class="col-md-2 control-label">名称:</label>
+						<div class="col-md-10">
+							<input type="text" class="form-control" ng-model="entry.cname" placeholder="必须输入"/>	
+						</div>
+					</div>
+			
+					<div class="form-group">
+						<label class="col-md-2 control-label">邮箱:</label>
+						<div class="col-md-10">
+							<input type="email" class="form-control" ng-model="entry.email" placeholder="输入正确的邮箱地址" />	
+						</div>
+					</div>
+				
+					<div class="form-group">
+						<label class="col-md-2 control-label">手机:</label>
+						<div class="col-md-10">
+							<input type="tel" class="form-control" ng-model="entry.mobile"  />	
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-2 control-label">固定电话:</label>
+						<div class="col-md-10">
+							<input type="tel" class="form-control" ng-model="entry.tel"  />	
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-2 control-label">QQ:</label>
+						<div class="col-md-10">
+							<input type="tel" class="form-control" ng-model="entry.qq"  />	
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="col-md-2 control-label">部门:</label>
+						<div class="col-md-4">
+							<input type="tel" class="form-control" ng-model="entry.iddepartment" placeholder="请选择" readonly required/>	
+						</div>
+						<div class="col-md-4">
+							<input type="tel" class="form-control" ng-model="entry.namedepartment"  placeholder="请选择" readonly required/>	
+						</div>
+						<div class="col-md-2">
+							<a class="btn btn-default" ng-click="openChooseDepModal()">选择部门</a>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-2 control-label">所属商城:</label>
+						<div class="col-md-10">
+							<input type="tel" class="form-control" ng-model="entry.idshop"  />	
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-2 control-label">是否管理员:</label>
+						<div class="col-md-10">
+							<label class="radio-inline">
+							  <input type="radio" ng-model="entry.isadmin" value="1" checked> 是
+							</label>
+							<label class="radio-inline">
+							  <input type="radio" ng-model="entry.isadmin" value="0"> 否
+							</label>		
+						</div>
+					</div>
+					
+					
+					
+					<div class="form-group">
+						<label class="col-md-2 control-label">备注:</label>
+						<div class="col-md-10">
+							<input type="tel" class="form-control" ng-model="entry.remark"  />	
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="col-md-2 control-label">登录时间:</label>
+						<div class="col-md-10">
+							<input type="tel" class="form-control" ng-model="entry.timestrweek"  />	
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-2 control-label">登录时间限制:</label>
+						<div class="col-md-10">
+							<input type="tel" class="form-control" ng-model="entry.timestrtime"  />	
+						</div>
+					</div>
+					
+				
+					<div class="form-group">
+						<label class="col-md-2 control-label">是否启用:</label>
+						<div class="col-md-10">
+							<label class="radio-inline">
+							  <input type="radio" ng-model="entry.isstart" value="1" checked> 是
+							</label>
+							<label class="radio-inline">
+							  <input type="radio" ng-model="entry.isstart" value="0"> 否
+							</label>		
+						</div>
+					</div>
+
+						<button ng-click="doUpdate()" ng-disabled="myForm.$invalid" type="submit" class="btn btn-primary col-md-offset-2">保存</button>
+						<button ng-click="goBack()"  class="btn btn-default">取消</button>
+				</form>
+			</div>
+		</div>
+
+	</div>
+</div>
+
